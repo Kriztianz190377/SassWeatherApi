@@ -1,0 +1,114 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+body {
+    background-color: v.$darkGreen;
+}
+
+.title {
+    background-image: url("../../src/image/cluouds.jpg");
+
+    text-align: center;
+    padding: 5rem 0;
+    color: v.$white;
+    font-size: 6rem;
+    transition: all 0.5s ease;
+    animation: backBanner infinite 10s;
+    cursor: pointer;
+
+    &:hover {
+        text-shadow: v.$shadow;
+    }
+}
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+.result {
+    .resulH4 {
+        text-align: center;
+        padding: 2rem 0;
+        color: v.$white;
+        cursor: pointer;
+        @include m.transition;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    p {
+        text-align: center;
+        padding: 0.5rem 0;
+        color: v.$green;
+        font-size: 3rem;
+        @include m.transition;
+        &:hover {
+            color: darken(v.$pink, 10%);
+        }
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    .input,.select{
+        width: 100%;
+    }
+    input,
+    select,
+    .submit {        
+        width: 100% ;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 5rem;
+    }
+    .input {
+        margin-top: 3rem;
+    }
+    .submit input {
+        display: block;
+        background-color: v.$green;
+        width: 50%;
+        margin: 0 auto;
+        color: v.$white;
+        font-size: 2rem;
+        font-weight: bold;
+        @include m.transition;
+        &:hover {
+            background-color: lighten(v.$green, 10%);
+            color: darken(v.$pink, 10%);
+        }
+    }
+}
+.error {
+    display: block;
+    text-align: center;
+    background-color: v.$white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 10px;
+    @include m.transition;
+    strong {
+        color: v.$pink;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    span {
+        color: v.$pink;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+    }
+    &:hover {
+        background-color: rgb(240, 236, 236);
+    }
+}

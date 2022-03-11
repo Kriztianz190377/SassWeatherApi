@@ -1,0 +1,21 @@
+{
+  "name": "weather-report",
+  "version": "1.0.0",
+  "description": "Project with SASS JavaScript and HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:build/css "
+
+  },
+  "keywords": [
+    "SASS",
+    "JavaScript",
+    "HTML"
+  ],
+  "author": "Christian-Castaneda",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}
